@@ -6,3 +6,5 @@ class Softmax:
         sum_z = z.sum()
         self.out = z/sum_z
         return self.out
+    def parameters(self):
+        return [
