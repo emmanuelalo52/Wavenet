@@ -4,7 +4,7 @@ class GLU:
         self.weight = torch.randn(chan_in,chan_out)/(chan_in)*0.5
         self.bias = torch.zeros(chan_out) if bias else None
     def __call__(self,x):
-        assert x.ndim >=2, "Input tensor must have at least 2 dimensions"
+        assert x.ndim >=2
         linear = x @ self.weight
         if self.bias is not None:
             linear += self.bias
